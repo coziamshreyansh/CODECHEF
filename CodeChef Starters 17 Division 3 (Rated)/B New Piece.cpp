@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define fr(a,b) for(int i = a; i < b; i++)
+#define rep(i,a,b) for(int i = a; i < b; i++)
+#define mod 1000000007
+#define inf (1LL<<60)
+#define all(x) (x).begin(), (x).end()
+#define prDouble(x) cout << fixed << setprecision(10) << x
+#define triplet pair<ll,pair<ll,ll>>
+#define goog(tno) cout << "Case #" << tno <<": "
+#define fast_io ios_base::sync_with_stdio(false);cin.tie(NULL)
+#define read(x) int x; cin >> x
+using namespace std;
+ 
+void init_code(){
+    fast_io;
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif 
+}
+
+
+int main() {
+   init_code();
+   read(queries);
+   int x,y,p,q;
+   while(queries--)
+   {
+      cin>>x>>y>>p>>q;
+      if(x==p && y==q)
+      {
+         cout<<"0"<<"\n"; continue;
+      }
+      int a = x+y;
+      int b = p+q;
+      if((a%2 == 0 && b%2==0) ||( a%2 != 0 && b%2!=0))
+      {
+         cout<<"2"<<"\n";
+      }
+      
+      else
+      {
+         cout<<"1"<<'\n';
+      }
+      
+   }
+   return 0;
+}
